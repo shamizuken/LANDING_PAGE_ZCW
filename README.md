@@ -1,7 +1,9 @@
 **Sarah's exam !** 👩🏻‍💻
+
 Dans le cadre de mon cours de Conception Web (ZCW), j'ai dû faire une landing page pour un thème de notre choix. 
 
-**Objectifs et exigences du projet.** 🎯
+## **Objectifs et exigences du projet.** 🎯
+
 L'objectif est de créer une landing page en utilisant que HTML et CSS. 
 
 Les exigences du projet sont :
@@ -14,11 +16,13 @@ Les exigences du projet sont :
 - Utiliser des variables.
 - Utiliser calc, clamp, min et max.
 
-**Technologies utilisées.** 🤖
+## **Technologies utilisées.** 🤖
+
 - HTML.
 - CSS.
 - ChatGPT comme aide.
 
-**Déploiement.** 🔗
+## **Déploiement.** 🔗
+
 Voici mon projet : https://shamizuken.github.io/LANDING_PAGE_ZCW/
 
