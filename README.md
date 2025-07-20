@@ -12,7 +12,7 @@ Les exigences du projet sont :
 - Que toutes les sections prennent 100% de la page.
 - Utiliser du flex/grid.
 - N'utiliser QUE du HTML et CSS.
-- Faire une nav barre en utilisant : <nav>, <ul>, <li> et <a>.
+- Faire une nav barre en utilisant : nav, ul, li et a. 
 - Utiliser des variables.
 - Utiliser calc, clamp, min et max.
 
