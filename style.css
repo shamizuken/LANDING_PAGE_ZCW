@@ -1,0 +1,321 @@
+:root {
+  /* Couleurs */
+  --couleur-principale: #163D2A;
+  --couleur-secondaire: #CFCDCF;
+  --couleur-texte: #333;
+  --texte-blanc: #ffffff;
+  --fond-temoignage: #495531;
+ 
+  /* Tailles de texte */
+  --taille-texte-base: clamp(1.125rem, 1.2vw, 1.125rem); /* 18px */
+  --taille-texte-petite: clamp(1rem, 1vw, 1rem);
+  --taille-texte-footer: clamp(0.875rem, 0.9vw, 0.875rem);
+  --taille-titre: clamp(2.5rem, 5vw, 2.5rem);
+ 
+  /* Espacements */
+  --espace-s: 0.9375rem; /* 15px */
+  --espace-m: 1.25rem;   /* 20px */
+  --espace-l: 1.875rem;  /* 30px */
+  --espace-xl: 3.75rem;  /* 60px */
+  --espace-xxl: 6.25rem; /* 100px */
+ 
+  /* Largeurs */
+  --max-largeur: 75rem; /* 1200px */
+ 
+  /* Radius & ombres */
+  --radius-m: 1.25rem;  /* 20px */
+  --radius-l: 1.875rem; /* 30px */
+  --ombre-légère: 0 0.125rem 0.5rem rgba(0, 0, 0, 0.05);
+}
+ 
+/* BASE */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+ 
+html {
+  scroll-behavior: smooth;
+}
+ 
+body {
+  font-family: 'Open Sans', sans-serif;
+  color: var(--couleur-texte);
+  line-height: 1.6;
+  padding-top: calc(3rem + 1.375rem); /* équivalent à 70px */
+  overflow-x: hidden;
+}
+ 
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Righteous', sans-serif;
+  color: var(--couleur-principale);
+  font-size: 18px;
+}
+ 
+p {
+  font-family: 'Open Sans', sans-serif;
+  font-size: var(--taille-texte-base);
+  color: var(--texte-blanc);
+  line-height: 1.8;
+}
+ 
+/* NAVIGATION FIXE  */
+nav {
+  background-color: var(--couleur-secondaire);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: var(--ombre-légère);
+  font-family: 'Righteous', sans-serif;
+}
+ 
+.nav-container {
+  max-width: var(--max-largeur);
+  width: min(100%, var(--max-largeur));
+  margin: 0 auto;
+  padding: var(--espace-s) var(--espace-l);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+ 
+.logo {
+  height: 3.125rem;
+}
+ 
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2.5rem;
+}
+ 
+.nav-links li a {
+  text-decoration: none;
+  color: var(--couleur-principale);
+  font-size: var(--taille-texte-base);
+  transition: color 0.3s ease;
+}
+ 
+.nav-links li a:hover {
+  color: #4a634d;
+}
+ 
+/* SECTION ACCUEIL */
+section#accueil {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 0 0 var(--espace-xl) 0;
+  overflow: hidden;
+}
+ 
+section#accueil::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("VUE_VIDEO_JAY_B_FOND_ECRAN_ACCUEIL.PNG");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.7;
+  z-index: 0;
+}
+ 
+.accueil-content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-left: 11.25rem;
+  max-width: 37.5rem;
+  h1 {
+    font-size: 20px;
+    }
+}
+
+.accueil-content, h1 {
+    font-size: 20px;
+    }
+
+ 
+section#accueil h1 {
+  font-size: clamp(1.75rem, 5vw, 2.5rem);
+  margin-bottom: var(--espace-m);
+}
+ 
+section#accueil p {
+  margin-bottom: var(--espace-l);
+}
+ 
+/* Bouton principal */
+.btn {
+  background-color: var(--couleur-principale);
+  color: var(--texte-blanc);
+  font-family: 'Righteous', sans-serif;
+  padding: 0.75rem 1.75rem;
+  border: none;
+  border-radius: var(--radius-l);
+  font-size: var(--taille-texte-base);
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+}
+ 
+.btn:hover {
+  background-color: #1e4d35;
+}
+ 
+/* SECTION ACTIVITÉS */
+section#activites {
+  width: 100vw;
+  min-height: 100vh;
+  background-color: var(--couleur-secondaire);
+  padding: var(--espace-xl) var(--espace-m);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+ 
+section#activites h2 {
+  font-size: var(--taille-titre);
+  margin-bottom: 2.5rem;
+  text-align: center;
+  max-width: 50rem;
+}
+ 
+.activites-container {
+  display: flex;
+  justify-content: center;
+  gap: var(--espace-l);
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: var(--max-largeur);
+}
+ 
+.activite-block {
+  flex: 1 1 18.75rem;
+  max-width: 18.75rem;
+  text-align: center;
+}
+ 
+.activite-block h3 {
+  font-size: 1.6rem;
+  margin-bottom: var(--espace-s);
+}
+ 
+.activite-card {
+  width: 100%;
+  height: 16.25rem;
+  border-radius: var(--radius-m);
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0 0.25rem 0.375rem rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  cursor: pointer;
+  opacity: 0.7;
+}
+ 
+.activite-card:hover {
+  transform: scale(1.05);
+  opacity: 1;
+}
+ 
+/* SECTION TÉMOIGNAGES */
+#témoignages {
+  background-color: var(--couleur-secondaire);
+  padding: var(--espace-xxl) var(--espace-l);
+  min-height: 100vh;
+}
+ 
+#témoignages h2 {
+  font-size: var(--taille-titre);
+  text-align: center;
+  margin: 0 auto var(--espace-xl) auto;
+}
+ 
+.temoignages-container {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--espace-l);
+  flex-wrap: wrap;
+}
+ 
+.temoignage-card {
+  background-color: var(--fond-temoignage);
+  color: var(--texte-blanc);
+  border-radius: var(--radius-m);
+  padding: var(--espace-l) var(--espace-m);
+  flex: 1;
+  min-width: 17.5rem;
+  text-align: center;
+}
+ 
+.temoignage-card img {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: var(--espace-s);
+}
+ 
+.temoignage-card h3 {
+  margin-bottom: 0.625rem;
+  color: var(--texte-blanc);
+}
+
+ 
+.temoignage-card p {
+  font-size: var(--taille-texte-petite);
+  line-height: 1.5;
+}
+ 
+/* FOOTER */
+footer {
+  background-color: var(--couleur-principale);
+  padding: var(--espace-l) var(--espace-m) var(--espace-m);
+  font-family: 'Righteous', sans-serif;
+  color: var(--couleur-secondaire);
+}
+ 
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: var(--espace-m);
+  font-size: var(--taille-texte-petite);
+}
+ 
+.footer-top span {
+  cursor: pointer;
+}
+ 
+.footer-socials {
+  display: flex;
+  gap: var(--espace-s);
+  margin-bottom: var(--espace-m);
+}
+ 
+.social-icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  cursor: pointer;
+}
+ 
+.footer-bottom {
+  text-align: center;
+  font-size: var(--taille-texte-footer);
+}
+
+.footer-text {
+  font-family: 'Righteous', sans-serif;
+  color: var(--couleur-secondaire);
+}
